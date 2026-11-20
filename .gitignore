@@ -1,0 +1,10 @@
+.opencode/
+node_modules/
+dist/
+tests/
+*.db
+*.db-wal
+*.db-shm
+*.log
+.env
+.env.*
