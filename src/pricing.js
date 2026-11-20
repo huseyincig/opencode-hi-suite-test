@@ -6,8 +6,7 @@ export function applyBulkDiscount(unitPrice, quantity) {
     throw new Error("unitPrice and quantity must be non-negative");
   }
   const subtotal = unitPrice * quantity;
-  // Intentional bug #1 (off-by-one): should be `quantity >= 10`
-  if (quantity > 10) {
+  if (quantity >= 10) {
     return Number((subtotal * 0.9).toFixed(2));
   }
   return Number(subtotal.toFixed(2));
